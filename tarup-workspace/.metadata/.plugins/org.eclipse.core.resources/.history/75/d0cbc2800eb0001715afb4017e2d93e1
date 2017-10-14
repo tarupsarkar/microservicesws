@@ -1,0 +1,10 @@
+package com.example.demo.controller;
+
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@EnableCircuitBreaker
+public class ProductController {
+
+}

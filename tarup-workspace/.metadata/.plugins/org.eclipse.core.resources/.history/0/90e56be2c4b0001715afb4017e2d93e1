@@ -1,0 +1,11 @@
+package com.example.demo;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class RibbonConfiguration {
+	//1 - Enable
+	//2 - Configured list of Servers
+	//3 - Set the RestTemplate as LoadBalanced
+
+}

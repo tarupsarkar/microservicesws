@@ -1,0 +1,24 @@
+package com.example.demo.prodinfo.client;
+
+import java.util.List;
+
+import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
+
+import com.example.demo.prodinfo.model.ItemInfo;
+
+@Component
+public class ItemInfoClient {
+	
+	private String itemInfoUri = "http://localhost:9500/api/iteminfo/fetchitems";
+	
+	public List<ItemInfo> getItemInfos() {
+		List<ItemInfo> itemInfos = (new RestTemplate()).getForObject(itemInfoUri, List.class);
+		return itemInfos;
+	}
+	
+	public ItemInfo getItemFromCache() {
+		
+	}
+
+}

@@ -1,0 +1,47 @@
+package com.example.demo.prodinfo.model;
+
+import java.io.Serializable;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class CatalogInfo implements Serializable {
+	
+	/**
+	 * serialVersionUID
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private String catalogId;
+	
+	private String catalogDesc;
+	
+	public CatalogInfo() {
+		super();
+	}
+	
+	public CatalogInfo(String catalogId, String catalogDesc) {
+		super();
+		this.catalogId = catalogId;
+		this.catalogDesc = catalogDesc;
+	}
+	
+	public String getCatalogId() {
+		return catalogId;
+	}
+
+	public void setCatalogId(String catalogId) {
+		this.catalogId = catalogId;
+	}
+
+	public String getCatalogDesc() {
+		return catalogDesc;
+	}
+
+	public void setCatalogDesc(String catalogDesc) {
+		this.catalogDesc = catalogDesc;
+	}
+
+	
+
+}

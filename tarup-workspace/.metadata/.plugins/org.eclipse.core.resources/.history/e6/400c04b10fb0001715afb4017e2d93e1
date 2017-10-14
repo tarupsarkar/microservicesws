@@ -1,0 +1,20 @@
+package com.example.demo.iteminfo.controller;
+
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@RestController
+@EnableCircuitBreaker
+@RequestMapping("/api/productinfo")
+public class InteInfoController {
+
+	@RequestMapping("/fetchproduct")
+	@JsonIgnoreProperties(value = "ItemInfo")
+	public String getProductInfo() {
+		
+		return "Return Product";
+	}
+}

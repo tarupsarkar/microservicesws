@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        uri: https://github.com/tarupsarkar/msrepo1/
+  profiles:
+    active:
+    - dev

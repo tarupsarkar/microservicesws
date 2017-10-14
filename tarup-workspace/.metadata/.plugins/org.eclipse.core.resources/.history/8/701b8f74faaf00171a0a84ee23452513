@@ -1,0 +1,5 @@
+spring:
+  cloud:
+    config:
+      server:
+        uri: https://github.com/tarupsarkar/msrepo1/blob/msrepo1_br1/configserver.properties 

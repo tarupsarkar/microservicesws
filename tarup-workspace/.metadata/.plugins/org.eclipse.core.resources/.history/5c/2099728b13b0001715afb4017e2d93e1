@@ -1,0 +1,20 @@
+package com.example.demo.prodinfo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.client.RestTemplate;
+
+import com.example.demo.prodinfo.model.ProductInfo;
+
+public class ProductServiceImpl implements ProductService {
+	
+	@Autowired
+	ProductInfo productInfo;
+
+	@Override
+	public ProductInfo getProduct() {
+		RestTemplate itemInfo = new RestTemplate("");
+		
+		return productInfo;
+	}
+
+}

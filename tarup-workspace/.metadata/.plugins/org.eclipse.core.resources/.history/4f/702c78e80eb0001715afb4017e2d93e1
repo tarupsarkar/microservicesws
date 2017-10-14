@@ -1,0 +1,12 @@
+package com.example.demo.prodinfo.model;
+
+import java.io.Serializable;
+
+public class ItemInfo implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+}

@@ -1,0 +1,7 @@
+eureka:
+  client:
+    serviceUrl:
+      default: http://localhost:8761
+ITEM-INFO:
+  ribbon:
+    listOfServers: localhost:37909, localhost:35111

@@ -1,0 +1,29 @@
+package com.example.demo.iteminfo.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.iteminfo.model.ItemInfo;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@RestController
+@EnableCircuitBreaker
+@RequestMapping("/api/iteminfo")
+public class ItemInfoController {
+	
+	@RequestMapping(value = "/fetchitem", produces = MediaType.APPLICATION_JSON_VALUE)
+	@JsonIgnoreProperties(value = "ItemInfo")
+	public List<ItemInfo> getItemInfos() {
+		List<ItemInfo> itemInfos = new ArrayList<>();
+		itemInfos.add(new ItemInfo("Toy"));
+		itemInfos.add(new ItemInfo("Appareal"));
+		itemInfos.add(new ItemInfo("Jewellery"));
+		
+		return itemInfos;
+	}
+}

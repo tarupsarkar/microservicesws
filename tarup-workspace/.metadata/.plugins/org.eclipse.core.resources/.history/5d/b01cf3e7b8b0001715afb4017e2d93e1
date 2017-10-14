@@ -1,0 +1,4 @@
+eureka:
+  client:
+    serviceUrl:
+      default: http://localhost:9797/
